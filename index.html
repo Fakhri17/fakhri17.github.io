@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="paper container my-5">
+    <div x-data="alpine_tabs()">
+      <div style="justify-content: space-between;"></div>
+      <div>
+        <button @click="button_tabs('about')" class="margin-right">About</button>
+        <button @click="button_tabs('education')" class="margin-right">Education</button>
+        <button @click="button_tabs('contact')" class="margin-right">Contact</button>
+        <button x-show="!darkMode" @click="change_dark()"><i class="bi-moon"></i></button>
+        <button x-show="darkMode" @click="change_dark()"><i class="bi-sun"></i></button>
+      </div>
+
+      <div class="text-center" x-show="selected === 'about'">
+        <h1 class="margin-bottom">Fakhri Alauddin</h1>
+        <img src="./assets/images/myphoto.jpg" class="mx-auto margin-bottom-large img-photo" style="display: block;">
+        <p>Hello. I am junior web developer from Surabaya, Indonesia. </p>
+        <p>I have 2 years experience in web developer. For now i am part time in 
+          <a href="https://pikarlabs.com" target="_blank">Pikar Labs</a> 
+        </p>
+      </div>
+
+      <div class="text-center" x-show="selected === 'education'">
+        <h1>Education</h1>
+      </div>
+
+      <div class="text-center" x-show="selected === 'contact'">
+        <h1>Contact</h1>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="https://unpkg.com/alpinejs@3.9.3/dist/cdn.min.js"></script>
+  <script>
+    function alpine_tabs() {
+      return {
+        selected: 'about',
+        darkMode: false,
+        init() {
+          if (localStorage.theme === 'dark') {
+            document.querySelector('html').classList.add('dark');
+            document.querySelector('html').classList.remove('light');
+          } else {
+            document.querySelector('html').classList.remove('dark');
+            document.querySelector('html').classList.add('light');
+          }
+          this.darkMode = document.querySelector('html').classList.contains('dark')
+        },
+
+        change_dark() {
+          if (localStorage.theme === 'dark') {
+            localStorage.theme = 'light';
+            document.querySelector('html').classList.add('light');
+            document.querySelector('html').classList.remove('dark');
+          } else {
+            localStorage.theme = 'dark';
+            document.querySelector('html').classList.add('dark');
+            document.querySelector('html').classList.remove('light');
+          }
+          this.darkMode = document.querySelector('html').classList.contains('dark')
+        },
+        button_tabs(data) {
+          this.selected = data
+        },
+      }
+    }
+  </script>
+</body>
+
+</html>
