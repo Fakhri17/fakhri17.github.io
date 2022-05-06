@@ -27,10 +27,25 @@
       <div class="text-center" x-show="selected === 'about'">
         <h1 class="margin-bottom">Fakhri Alauddin</h1>
         <img data-src="./assets/image/myphoto.jpg" class="mx-auto margin-bottom-large img-photo lazy" style="display: block;">
-        <p>Hello. I am junior web developer from Surabaya, Indonesia. </p>
-        <p>I have 2 years experience in web developer. For now i am part time in 
-          <a href="https://pikarlabs.com" target="_blank">Pikar Labs</a> 
-        </p>
+        <div class="margin-bottom-large">
+          <p>Hello. I am junior web developer from Surabaya, Indonesia. </p>
+          <p>I have 2 years experience in web developer. For now i am part time in 
+            <a href="https://pikarlabs.com" target="_blank">Pikar Labs</a> 
+          </p>
+        </div>
+       <div>
+         <p>For my stack in web developer i'am using: </p>
+         <span class="badge warning margin-bottom-small margin-right-small text-primary">Vanilla JS</span>
+         <span class="badge secondary margin-bottom-small margin-right-small text-primary">Jquery</span>
+         <span class="badge danger margin-bottom-small margin-right-small text-primary">Craft CMS</span>
+         <span class="badge secondary margin-bottom-small margin-right-small text-primary">CSS/Bootstrap</span>
+         <span class="badge margin-bottom-small margin-right-small text-primary">MySql</span>
+         <span class="badge success margin-bottom-small margin-right-small text-primary">VueJs/NuxtJS</span>
+         <span class="badge success margin-bottom-small margin-right-small text-primary">NodeJs</span>
+         <span class="badge margin-bottom-small margin-right-small text-primary">PHP</span>
+         <span class="badge margin-bottom-small margin-right-small text-primary">Git</span>
+       </div>
+        
       </div>
 
       <div class="text-center" x-show="selected === 'education'">
@@ -50,43 +65,7 @@
 
   <script defer src="https://unpkg.com/alpinejs@3.9.3/dist/cdn.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
-  <script>
-    function alpine_tabs() {
-      return {
-        selected: 'about',
-        darkMode: false,
-        init() {
-          var lazyLoadInstance = new LazyLoad({
-            // Your custom settings go here
-          });
-          if (localStorage.theme === 'dark') {
-            document.querySelector('html').classList.add('dark');
-            document.querySelector('html').classList.remove('light');
-          } else {
-            document.querySelector('html').classList.remove('dark');
-            document.querySelector('html').classList.add('light');
-          }
-          this.darkMode = document.querySelector('html').classList.contains('dark')
-        },
-
-        change_dark() {
-          if (localStorage.theme === 'dark') {
-            localStorage.theme = 'light';
-            document.querySelector('html').classList.add('light');
-            document.querySelector('html').classList.remove('dark');
-          } else {
-            localStorage.theme = 'dark';
-            document.querySelector('html').classList.add('dark');
-            document.querySelector('html').classList.remove('light');
-          }
-          this.darkMode = document.querySelector('html').classList.contains('dark')
-        },
-        button_tabs(data) {
-          this.selected = data
-        },
-      }
-    }
-  </script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
