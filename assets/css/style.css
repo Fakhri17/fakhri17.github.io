@@ -1,19 +1,141 @@
-.my-5{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+/* implement font family */
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-html.dark  body{
-  background-color: #41403e;
+.icons-sosmed{
+  color: #FF5C63;
+  font-size: 30px;
 }
 
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
+
+/* hover icons sosmed with best interactive color*/
+.icons-sosmed:hover{
+  color: #fd4049;
 }
 
-.img-photo{
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+/* section margin 5 rem only mobile */
+@media (max-width: 991px) {
+  .margin-mobile-only {
+    margin: 5rem 0;
+  }
 }
+
+.nav-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* hover nav text */
+.nav-text:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* active nav text */
+.nav-text.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.frame-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* hidden frame top in mobile view */
+@media (max-width: 991px) {
+  .frame-top {
+    display: none;
+  }
+}
+
+.name-text {
+  color: #fff;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.sub-name-text {
+  color: #fff;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/* get small for name & sub name in mobile view */
+@media (max-width: 991px) {
+  .name-text {
+    font-size: 40px;
+    text-align: center;
+  }
+  .sub-name-text {
+    font-size: 20px;
+  }
+  .center-mobile {
+    text-align: center;
+  }
+  .icons-mobile {
+    justify-content: center;
+  }
+}
+
+.center-name{
+  height: 100vh; /* Set the section height to 100% of the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-fakhri{
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* absolute image fakhri in mobile view */
+@media (max-width: 991px) {
+  .img-fakhri {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+}
+
+.rectangle-1 {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.frame-4{
+  position: absolute;
+  bottom: 14%;
+  right: 12%;
+  overflow: hidden;
+  z-index: -99;
+}
+
+/* display none rectangle */
+@media (max-width: 991px) {
+  .rectangle-1 {
+    /* display: none; */
+    bottom: 5%;
+  }
+  .frame-4 {
+    /* display: none; */
+  }
+}
+
+
