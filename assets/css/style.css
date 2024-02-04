@@ -177,6 +177,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -99;
     /* top: 150px; */
   }
 }
@@ -189,6 +190,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: 150px;
+    z-index: -99;
   }
 }
 
