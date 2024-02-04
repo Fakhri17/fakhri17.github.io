@@ -173,18 +173,18 @@ body {
 /* set img-fakhri to width 75% if mobile s/d tablet and center using position */
 @media (max-width: 991px) {
   .img-fakhri-index {
-    width: 75%;
+    width: 100%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 75px;
+    /* top: 150px; */
   }
 }
 
-/* set in ios device */
-@media (max-width: 991px) and (max-height: 991px) {
+/* set in ios iphone 12 device */
+@media (max-width: 428px) {
   .img-fakhri-index {
-    width: 75%;
+    width: 100%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
