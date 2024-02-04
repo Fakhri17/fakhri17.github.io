@@ -177,6 +177,17 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    top: 75px;
+  }
+}
+
+/* set in ios device */
+@media (max-width: 991px) and (max-height: 991px) {
+  .img-fakhri-index {
+    width: 75%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     top: 150px;
   }
 }
