@@ -164,3 +164,17 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+
+.img-fakhri-index{
+  width: 100%;
+  height: 100%;
+}
+
+/* set img-fakhri to width 75% if mobile s/d tablet and center using position */
+@media (max-width: 991px) {
+  .img-fakhri-index {
+    width: 75%;
+    position: absolute;
+  }
+}
+
