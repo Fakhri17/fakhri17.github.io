@@ -1,27 +1,46 @@
 /* implement font family */
 
-html{
+html {
   scroll-behavior: smooth;
-  height: 100%;
+  /* height: 100vh; */
 }
 body {
   font-family: "Poppins", sans-serif;
 }
 
-.icons-sosmed{
-  color: #FF5C63;
+.icons-sosmed {
+  color: #ff5c63;
   font-size: 30px;
 }
 
-
 /* hover icons sosmed with best interactive color*/
-.icons-sosmed:hover{
+.icons-sosmed:hover {
   color: #fd4049;
+}
+
+.margin-about {
+  margin: 7rem 0;
+}
+
+.sub-introduction {
+  color: #94989b;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.sub-experience {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 /* section margin 5 rem only mobile */
 @media (max-width: 991px) {
-  .margin-mobile-only {
+  .margin-home {
     margin: 5rem 0;
   }
 }
@@ -91,14 +110,14 @@ body {
   }
 }
 
-.center-name{
-  height: 100vh; /* Set the section height to 100% of the viewport height */
+.center-name {
+  /* Set the section height to 100% of the viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img-fakhri{
+.img-fakhri {
   position: relative;
   bottom: 0;
   overflow: hidden;
@@ -119,7 +138,7 @@ body {
   overflow: hidden;
 }
 
-.frame-4{
+.frame-4 {
   position: absolute;
   bottom: 14%;
   right: 12%;
@@ -138,4 +157,10 @@ body {
   }
 }
 
-
+.sub-text-icons {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
